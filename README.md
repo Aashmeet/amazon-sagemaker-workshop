@@ -11,7 +11,7 @@ You'll start by creating an Amazon SageMaker notebook instance with the requisit
 
 # Workshops
 
-- [**Introduction to SageMaker**](Introduction) - This workshop demonstrates the main features of Amazon SageMaker.  It does so via a set of straightforward examples for common use cases including: working with structured data, natural language processing (sentiment analysis), and computer vision (image classification).  Content includes how to do exploratory data analysis in Amazon SageMaker notebook instances, run hosted training, and stand up hosted model endpoints.
+- [**Introduction to Amazon SageMaker**](Introduction) - This workshop demonstrates the main features of Amazon SageMaker.  It does so via a set of straightforward examples for common use cases including: working with structured data, natural language processing (sentiment analysis), and computer vision (image classification).  Content includes how to do exploratory data analysis in Amazon SageMaker notebook instances, run hosted training, and stand up hosted model endpoints.
 
 
 - [**Simplify Workflows with Scripts, the CLI and Console**](Simplify-Workflows) - The focus of this workshop is on simplifying Amazon SageMaker workflows using scripts, the AWS CLI, and the Amazon SageMaker console.  All of these are alternatives to using Jupyter notebooks as your interface to Amazon SageMaker; there is no necessity to use notebooks to leverage key Amazon SageMaker components such as hosted training and hosted model endpoints. 
