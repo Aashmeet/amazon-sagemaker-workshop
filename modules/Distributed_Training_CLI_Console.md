@@ -47,7 +47,7 @@ In this module, we will learn about how to take full advantage of distributed tr
 
 - We'll be using the AWS CLI and Bash scripts to run the training jobs. Using the AWS CLI and scripts is an excellent way to automate machine learning pipelines and repetitive tasks, such as periodic training jobs. If you haven't done so already, please set up and open your Cloud9 environment now as described in [**Cloud9 Setup**](../Cloud9). Below is a screenshot of what your Cloud9 environment should look like as you create the first script below and run the related commands.  Step-by-step instructions follow.
 
-![Cloud9](./images/dev-environment.png)
+![Cloud9](./images/distrib-dev-environment.png)
 
 9. Create a text file named `replicated.sh`. If you haven't done so already, open a terminal/command window that supports Bash to enter commands. In the terminal window, change to the directory in which you created the file (if you're not already there), then run the following command:
 
@@ -180,7 +180,7 @@ sagemaker create-training-job \
 
 - Repeat the above steps for the sharded training job model, except:  for 'Model name', enter `distributed-sharded`, and for 'Location of model artifacts', enter the path for the sharded training job model artifact.  
 
-![Model](./images/model.png)
+![Model](./images/distrib-model.png)
 
 17.  **Endpoint Configuration**:  Once we've setup our models, we can configure what our hosting endpoints should be. Here we specify the EC2 instance type to use for hosting, the initial number of instances, and our hosting model name.  Again, we'll do this twice, once for each model we trained earlier. Here are the steps to do this via the SageMaker console (see screenshot below for an example of all relevant fields filled in for the Oregon AWS Region):
 
@@ -192,7 +192,7 @@ sagemaker create-training-job \
 
 - Repeat the above steps for the sharded training job model, except:  for 'Endpoint configuration name', enter `distributed-sharded`, and for the **Add model** popup, select the `distributed-sharded` model.  
 
-![Endpoint Configuration](./images/endpoint-config.png)
+![Endpoint Configuration](./images/distrib-endpoint-config.png)
 
 18.  **Endpoint Creation**:  Now that we've specified how our endpoints should be configured, we can create them.  For this final step in the process of settng up endpoints, we'll once again use the SageMaker console to do so (see screenshot below for an example of all relevant fields filled in for the Oregon AWS Region):
 
@@ -206,7 +206,7 @@ sagemaker create-training-job \
 
 - In the **Endpoints** table, refer to the 'Status' column, and wait for both endpoints to change from 'Creating' to 'InService' before proceeding to the next step. It will take several minutes for endpoint creation, possibly as long as ten minutes.  
 
-![Endpoint](./images/endpoint.png)
+![Endpoint](./images/distrib-endpoint.png)
 
 19.  **Evaluate**:  To compare predictions from our two models, let's return to the notebook we used earlier.  When you are finished, return here and proceed to the next section.  
 
